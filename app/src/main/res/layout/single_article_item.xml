@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="article" type="com.example.journal.models.Article" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.example.journal.ui.custom.ArticleItemView
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            app:articleTitle="@{article.title}"
+            app:articleImage="@{article.image}"
+            app:articleId="@{article.id.toString()}"
+            app:articleMedia="@{article.media}"/>
+    </LinearLayout>
+</layout>
